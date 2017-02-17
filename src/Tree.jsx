@@ -478,7 +478,7 @@ class Tree extends React.Component {
       dragOverGapTop: state.dragOverNodeKey === key && this.dropPosition === -1,
       dragOverGapBottom: state.dragOverNodeKey === key && this.dropPosition === 1,
       _dropTrigger: this._dropTrigger,
-      expanded: state.expandedKeys.indexOf(key) !== -1,
+      expanded: props.defaultExpandAll || state.expandedKeys.indexOf(key) !== -1,
       selected: state.selectedKeys.indexOf(key) !== -1,
       openTransitionName: this.getOpenTransitionName(),
       openAnimation: props.openAnimation,
